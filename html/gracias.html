@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gracias, contacto, formulario enviado, venta de autos, automoviles">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <meta name="description" content="Gracias por ponerte en contacto con nosotros. Pronto nos comunicaremos contigo para brindarte la información que necesitas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <title>Formulario Enviado - Venta de Automoviles</title>
+    <script src="../js/nav-scroll.js"></script>
+    <style>
+        .notification-container {
+            text-align: center;
+            padding: 3rem 1rem;
+            max-width: 800px;
+            margin: 3rem auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notification-container h2 {
+            color: #0066cc;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .notification-container p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .countdown {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        
+        .loading-icon {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .loading-icon:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #0066cc;
+            border-color: #0066cc transparent #0066cc transparent;
+            animation: loading-icon 1.2s linear infinite;
+        }
+        
+        @keyframes loading-icon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <meta http-equiv="refresh" content="5;url=autos.html">
+</head>
+<body>
+    <header>
+        <h1>Formulario Enviado</h1>
+        <p>Tu información ha sido procesada</p>
+    </header>
+    <main>
+        <section class="notification-container">
+            <div class="loading-icon"></div>
+            <h2>Se ha enviado la información correctamente</h2>
+            <p>Pronto te enviaremos un mensaje con más detalles.</p>
+            <p>Serás redirigido a la página de autos en <span id="countdown" class="countdown">5</span> segundos...</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© Reduardo 2025</p>
+    </footer>
+    
+    <script src="../js/gracias.js"></script>
+</body>
+</html> 

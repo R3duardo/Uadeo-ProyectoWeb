@@ -341,3 +341,255 @@ footer {
         display: none;
     }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: modalIn 0.4s ease-out;
+    overflow: hidden;
+}
+
+@keyframes modalIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: #e74c3c;
+}
+
+.modal-header {
+    padding: 20px 25px;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.modal-body {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.modal-image-container img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.modal-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.specs-container,
+.description-container,
+.features-container {
+    margin-bottom: 15px;
+}
+
+.specs-container h3,
+.description-container h3,
+.features-container h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.modal-car-specs,
+.modal-car-features {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#modal-car-specs li,
+#modal-car-features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+#modal-car-specs li:before,
+#modal-car-features li:before {
+    content: "✓";
+    color: #28a745;
+    margin-right: 10px;
+    font-weight: bold;
+    min-width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+#modal-car-description {
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.modal-footer {
+    padding: 15px 25px;
+    background-color: #f8f9fa;
+    text-align: right;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 8px 8px;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-image-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-content {
+        width: 85%;
+        max-width: 1100px;
+    }
+    
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-image-container {
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .modal-image-container img {
+        max-height: 400px;
+        object-fit: contain;
+        max-width: 100%;
+        display: inline-block;
+    }
+    
+    .specs-features-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    
+    .specs-container, 
+    .features-container {
+        flex: 1;
+        min-width: 0;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .description-container {
+        margin-bottom: 25px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}

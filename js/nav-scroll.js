@@ -1,10 +1,10 @@
+// arreglar lo del nav el margen extra en movil
+
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const menuToggleCheckbox = document.getElementById('menu-toggle-checkbox');
     
-    let scrollOffset;
-    window.innerWidth <= 768 && menuToggleCheckbox ? scrollOffset = 210
-    : scrollOffset = 80;
+    const scrollOffset = 80;
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
