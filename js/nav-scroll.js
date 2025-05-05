@@ -1,5 +1,3 @@
-// arreglar lo del nav el margen extra en movil
-
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const menuToggleCheckbox = document.getElementById('menu-toggle-checkbox');

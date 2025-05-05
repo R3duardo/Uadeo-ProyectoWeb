@@ -246,6 +246,10 @@ footer {
     border: 1px solid #ef9a9a;
 }
 
+main {
+    min-height: 100vh;
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
