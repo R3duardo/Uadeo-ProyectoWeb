@@ -47,7 +47,7 @@ main {
 
 .car-card {
     width: 300px;
-    margin: 1em 0.5em 1em 0.5em;
+    margin: 1em 2em 1em 2em;
     padding: 1em;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -533,6 +533,10 @@ footer {
     .modal-image-container {
         padding-right: 0;
         margin-bottom: 20px;
+    }
+
+    .car-card {
+        margin: 1em 0em;
     }
 }
 

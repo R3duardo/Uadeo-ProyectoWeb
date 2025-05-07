@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizacion de Autos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/practica05.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html">← Volver al Inicio</a>
+  </nav>
+
+  <h1>Cotización de Autos</h1>
+  
+  <form id="cotizacionForm">
+    <div class="form-group">
+      <label for="numeroCotizacion">Número de Cotización:</label>
+      <input type="text" id="numeroCotizacion" required placeholder="Ej: COT-2024-001">
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción del Auto:</label>
+      <input type="text" id="descripcion" required placeholder="Ej: Toyota Corolla 2024">
+    </div>
+
+    <div class="form-group">
+      <label for="precio">Precio del Auto:</label>
+      <input type="number" id="precio" required min="0" step="0.01" placeholder="25000.00">
+    </div>
+
+    <div class="form-group">
+      <label for="porcentajeInicial">Porcentaje de Pago Inicial:</label>
+      <input type="number" id="porcentajeInicial" required min="0" max="100" step="0.01" placeholder="20">
+    </div>
+
+    <div class="form-group">
+      <label for="plazo">Plazo de Pagos:</label>
+      <select id="plazo" required>
+        <option value="">Seleccione un plazo</option>
+        <option value="12">12 meses</option>
+        <option value="24">24 meses</option>
+        <option value="36">36 meses</option>
+        <option value="48">48 meses</option>
+        <option value="60">60 meses</option>
+      </select>
+    </div>
+
+    <button type="submit">Calcular Cotización</button>
+  </form>
+
+  <div id="resultado">
+    <h2>Resultado de la Cotización</h2>
+    <p><strong>Número de Cotización:</strong> <span id="resNumeroCotizacion"></span></p>
+    <p><strong>Descripción del Auto:</strong> <span id="resDescripcion"></span></p>
+    <p><strong>Precio del Auto:</strong> <span>$<span id="resPrecio"></span></span></p>
+    <p><strong>Porcentaje de Pago Inicial:</strong> <span><span id="resPorcentajeInicial"></span>%</span></p>
+    <p><strong>Plazo de Pagos:</strong> <span id="resPlazo"></span></p>
+    <p><strong>Pago Inicial:</strong> <span>$<span id="resPagoInicial"></span></span></p>
+    <p><strong>Total a Financiar:</strong> <span>$<span id="resTotalFinanciar"></span></span></p>
+    <p><strong>Pago Mensual:</strong> <span>$<span id="resPagoMensual"></span></span></p>
+  </div>
+
+  <script src="../js/practica05.js"></script>
+</body>
+</html>
